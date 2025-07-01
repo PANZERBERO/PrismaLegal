@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prisma Legal - Soluciones Legales sin Complicaciones</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-purple': {
+                            '50': '#f5f3ff',
+                            '100': '#ede9fe',
+                            '200': '#ddd6fe',
+                            '300': '#c4b5fd',
+                            '400': '#a78bfa',
+                            '500': '#8b5cf6',
+                            '600': '#7c3aed',
+                            '700': '#6d28d9',
+                            '800': '#5b21b6',
+                            '900': '#4c1d95',
+                            '950': '#2e1065',
+                        },
+                        'brand-gray': {
+                            '50': '#f8fafc', '100': '#f1f5f9', '200': '#e2e8f0', '300': '#cbd5e1', '400': '#94a3b8', '500': '#64748b', '600': '#475569', '700': '#334155', '800': '#1e293b', '900': '#0f172a',
+                        },
+                        'whatsapp': '#25D366',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilo para el scroll suave. */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-brand-gray-50 text-brand-gray-700 font-sans antialiased">
+
+    <!-- === HEADER & NAVIGATION === -->
+    <header class="bg-brand-purple-800 sticky top-0 z-40 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">
+                Prisma<span class="font-light text-brand-purple-200">Legal</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#servicios" class="text-brand-purple-200 hover:text-white transition-colors">Servicios</a>
+                <a href="#proceso" class="text-brand-purple-200 hover:text-white transition-colors">Nuestro Proceso</a>
+                <a href="#abogada" class="text-brand-purple-200 hover:text-white transition-colors">Tu Abogada</a>
+                <a href="#contacto" class="bg-white text-brand-purple-800 font-semibold px-5 py-2 rounded-lg hover:bg-brand-purple-100 transition-all">
+                    Contacto
+                </a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6 text-white"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-purple-700">
+            <a href="#servicios" class="block py-3 px-6 text-white hover:bg-brand-purple-600">Servicios</a>
+            <a href="#proceso" class="block py-3 px-6 text-white hover:bg-brand-purple-600">Nuestro Proceso</a>
+            <a href="#abogada" class="block py-3 px-6 text-white hover:bg-brand-purple-600">Tu Abogada</a>
+            <a href="#contacto" class="block py-3 px-6 text-white hover:bg-brand-purple-600 font-semibold">Contacto</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- === SECTION 1: HERO (UPDATED WITH NEW BACKGROUND IMAGE) === -->
+        <section id="hero" class="relative py-24 md:py-40 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/5951342/pexels-photo-5951342.jpeg');">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-brand-purple-950 bg-opacity-60"></div>
+            
+            <div class="relative container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
+                    Soluciones Legales <span class="text-brand-purple-300">sin Complicaciones</span>.
+                </h1>
+                <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-brand-purple-200">
+                    Asesoría experta para proteger tus intereses y darte tranquilidad. Resolvemos problemas de familia, laborales, contratos, deudas y más.
+                </p>
+                <a href="#contacto" class="mt-10 inline-block bg-brand-purple-500 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-brand-purple-400 transition-all hover:scale-105 shadow-lg hover:shadow-xl">
+                    Agendar Evaluación Inicial Gratuita
+                </a>
+            </div>
+        </section>
+
+        <!-- === SECTION 2: THE PROBLEM === -->
+        <section id="problema" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-gray-800">¿Enfrentas una situación legal que te supera?</h2>
+                <p class="mt-4 text-lg max-w-3xl mx-auto text-brand-gray-600">Sabemos que los problemas legales pueden ser estresantes y confusos. Términos que no entiendes, contratos con letra chica, deudas que te quitan el sueño o conflictos que parecen no tener fin. No tienes por qué navegar esto en soledad.</p>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex flex-col items-center"><i data-lucide="puzzle" class="w-12 h-12 text-brand-purple-500"></i><h3 class="mt-4 text-xl font-semibold text-brand-gray-800">Confusión</h3><p class="mt-2 text-brand-gray-600">Leyes complejas y jerga incomprensible.</p></div>
+                    <div class="flex flex-col items-center"><i data-lucide="cloud-lightning" class="w-12 h-12 text-brand-purple-500"></i><h3 class="mt-4 text-xl font-semibold text-brand-gray-800">Estrés</h3><p class="mt-2 text-brand-gray-600">Incertidumbre que afecta tu día a día.</p></div>
+                    <div class="flex flex-col items-center"><i data-lucide="folder-clock" class="w-12 h-12 text-brand-purple-500"></i><h3 class="mt-4 text-xl font-semibold text-brand-gray-800">Pérdida de Tiempo</h3><p class="mt-2 text-brand-gray-600">Procesos lentos y burocráticos.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === SECTION 3: THE SOLUTION === -->
+        <section id="proceso" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12"><h2 class="text-3xl md:text-4xl font-bold text-brand-gray-800">Nuestro Proceso: Claridad en 3 Pasos</h2><p class="mt-4 text-lg max-w-2xl mx-auto text-brand-gray-600">Hemos diseñado un método para que siempre sepas dónde estás parado.</p></div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-brand-gray-50 p-8 rounded-xl border border-brand-gray-200"><div class="bg-brand-purple-100 text-brand-purple-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto"><i data-lucide="ear" class="w-8 h-8"></i></div><h3 class="mt-6 text-xl font-bold text-brand-gray-900">1. Escuchamos y Entendemos</h3><p class="mt-2 text-brand-gray-600">Primero, nos cuentas tu caso. Sin interrupciones, sin juicios. Nos enfocamos en entender cada detalle de tu situación.</p></div>
+                    <div class="bg-brand-gray-50 p-8 rounded-xl border border-brand-gray-200"><div class="bg-brand-purple-100 text-brand-purple-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto"><i data-lucide="lightbulb" class="w-8 h-8"></i></div><h3 class="mt-6 text-xl font-bold text-brand-gray-900">2. Analizamos y Explicamos</h3><p class="mt-2 text-brand-gray-600">Estudiamos tu caso y te lo explicamos con un lenguaje simple y directo, usando informes claros para que entiendas tus opciones.</p></div>
+                    <div class="bg-brand-gray-50 p-8 rounded-xl border border-brand-gray-200"><div class="bg-brand-purple-100 text-brand-purple-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto"><i data-lucide="move-right" class="w-8 h-8"></i></div><h3 class="mt-6 text-xl font-bold text-brand-gray-900">3. Actuamos con Estrategia</h3><p class="mt-2 text-brand-gray-600">Una vez que tienes toda la información, ejecutamos un plan de acción legal diseñado para conseguir el mejor resultado para ti.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === SECTION 4: AREAS OF PRACTICE === -->
+        <section id="servicios" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-gray-800">¿Cómo Podemos Ayudarte?</h2>
+                    <p class="mt-4 text-lg max-w-3xl mx-auto text-brand-gray-600">Ofrecemos asesoría experta en las áreas legales que más afectan a las personas, familias y pymes. Haz clic en un área para saber más.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service Cards -->
+                    <div class="service-card bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow border border-brand-gray-200 flex items-start space-x-4 cursor-pointer" data-service="familia">
+                        <i data-lucide="heart-handshake" class="w-8 h-8 text-brand-purple-600 flex-shrink-0 mt-1"></i>
+                        <div><h3 class="font-bold text-lg text-brand-gray-900">Derecho de Familia</h3><p class="text-brand-gray-600 mt-1">Te asesoramos en divorcios, pensión de alimentos y cuidado personal.</p></div>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow border border-brand-gray-200 flex items-start space-x-4 cursor-pointer" data-service="laboral">
+                        <i data-lucide="briefcase" class="w-8 h-8 text-brand-purple-600 flex-shrink-0 mt-1"></i>
+                        <div><h3 class="font-bold text-lg text-brand-gray-900">Derecho Laboral</h3><p class="text-brand-gray-600 mt-1">Defendemos tus derechos como trabajador en despidos y autodespidos.</p></div>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow border border-brand-gray-200 flex items-start space-x-4 cursor-pointer" data-service="arriendo">
+                        <i data-lucide="home" class="w-8 h-8 text-brand-purple-600 flex-shrink-0 mt-1"></i>
+                        <div><h3 class="font-bold text-lg text-brand-gray-900">Conflictos de Arriendo</h3><p class="text-brand-gray-600 mt-1">Protegemos tus derechos como arrendador o arrendatario.</p></div>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow border border-brand-gray-200 flex items-start space-x-4 cursor-pointer" data-service="deudas">
+                        <i data-lucide="banknote" class="w-8 h-8 text-brand-purple-600 flex-shrink-0 mt-1"></i>
+                        <div><h3 class="font-bold text-lg text-brand-gray-900">Cobranza de Deudas</h3><p class="text-brand-gray-600 mt-1">Te ayudamos a recuperar lo que te deben (pagarés, cheques, facturas).</p></div>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow border border-brand-gray-200 flex items-start space-x-4 cursor-pointer" data-service="contratos">
+                        <i data-lucide="file-signature" class="w-8 h-8 text-brand-purple-600 flex-shrink-0 mt-1"></i>
+                        <div><h3 class="font-bold text-lg text-brand-gray-900">Contratos</h3><p class="text-brand-gray-600 mt-1">Aseguramos que tus acuerdos sean justos, claros y te protejan.</p></div>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow border border-brand-gray-200 flex items-start space-x-4 cursor-pointer" data-service="herencias">
+                        <i data-lucide="users" class="w-8 h-8 text-brand-purple-600 flex-shrink-0 mt-1"></i>
+                        <div><h3 class="font-bold text-lg text-brand-gray-900">Herencias y Testamentos</h3><p class="text-brand-gray-600 mt-1">Te guiamos en la planificación y gestión de asuntos sucesorios.</p></div>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow border border-brand-gray-200 flex items-start space-x-4 cursor-pointer" data-service="indemnizacion">
+                        <i data-lucide="shield-half" class="w-8 h-8 text-brand-purple-600 flex-shrink-0 mt-1"></i>
+                        <div><h3 class="font-bold text-lg text-brand-gray-900">Juicios por Indemnización</h3><p class="text-brand-gray-600 mt-1">Buscamos la compensación que mereces por daños sufridos.</p></div>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow border border-brand-gray-200 flex items-start space-x-4 cursor-pointer" data-service="consumidor">
+                        <i data-lucide="shopping-cart" class="w-8 h-8 text-brand-purple-600 flex-shrink-0 mt-1"></i>
+                        <div><h3 class="font-bold text-lg text-brand-gray-900">Defensa del Consumidor</h3><p class="text-brand-gray-600 mt-1">Te defendemos ante incumplimientos o abusos de empresas.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === SECTION 5: WHY US? === -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+               <div class="text-center mb-12"><h2 class="text-3xl md:text-4xl font-bold text-brand-gray-800">Tu Tranquilidad es Nuestro Objetivo</h2></div>
+               <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                   <div class="flex items-start space-x-4"><i data-lucide="check-circle-2" class="w-7 h-7 text-green-500 flex-shrink-0 mt-1"></i><div><h3 class="font-semibold text-lg text-brand-gray-800">Comunicación Directa y Transparente</h3><p class="text-brand-gray-600">Hablarás siempre con tu abogada. Sabrás en todo momento en qué estado está tu caso.</p></div></div>
+                   <div class="flex items-start space-x-4"><i data-lucide="check-circle-2" class="w-7 h-7 text-green-500 flex-shrink-0 mt-1"></i><div><h3 class="font-semibold text-lg text-brand-gray-800">Enfoque en Soluciones</h3><p class="text-brand-gray-600">Buscamos la vía más eficiente para resolver tu problema, explorando la mediación y el acuerdo.</p></div></div>
+                   <div class="flex items-start space-x-4"><i data-lucide="check-circle-2" class="w-7 h-7 text-green-500 flex-shrink-0 mt-1"></i><div><h3 class="font-semibold text-lg text-brand-gray-800">Honorarios Claros desde el Inicio</h3><p class="text-brand-gray-600">Te entregamos una propuesta de honorarios transparente y sin sorpresas.</p></div></div>
+                   <div class="flex items-start space-x-4"><i data-lucide="check-circle-2" class="w-7 h-7 text-green-500 flex-shrink-0 mt-1"></i><div><h3 class="font-semibold text-lg text-brand-gray-800">Asesoría Moderna</h3><p class="text-brand-gray-600">Usamos la tecnología para agilizar los procesos con reuniones virtuales y gestión digital.</p></div></div>
+               </div>
+            </div>
+       </section>
+       
+       <!-- === SECTION 6: ABOUT GENESIS === -->
+       <section id="abogada" class="py-20 bg-brand-gray-100">
+           <div class="container mx-auto px-6">
+               <div class="bg-white rounded-lg shadow-xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                   <img src="https://placehold.co/400x400/ede9fe/4c1d95?text=Génesis+Moraga" alt="Foto de Génesis Moraga, Abogada" class="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover flex-shrink-0 border-4 border-white shadow-md">
+                   <div class="text-center md:text-left">
+                       <h2 class="text-3xl font-bold text-brand-gray-800">Conoce a tu Abogada</h2>
+                       <p class="mt-4 text-lg text-brand-gray-600">
+                           "Soy Génesis Moraga, abogada de la Universidad Central. Mi misión es desmitificar el derecho y convertirlo en una herramienta accesible para todos. Creo firmemente que un buen consejo legal, entregado de forma clara y honesta, es la clave para que las personas y los negocios puedan tomar decisiones con confianza y seguridad. En Prisma Legal, no solo represento causas, asesoro personas."
+                       </p>
+                       <a href="https://www.linkedin.com/in/moragagenesis/" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center space-x-2 text-brand-purple-600 font-semibold hover:underline">
+                           <span>Ver perfil en LinkedIn</span>
+                           <i data-lucide="linkedin" class="w-5 h-5"></i>
+                       </a>
+                   </div>
+               </div>
+           </div>
+       </section>
+       
+       <!-- === SECTION 7: FINAL CTA & CONTACT FORM === -->
+       <section id="contacto" class="py-20">
+           <div class="container mx-auto px-6">
+                <div class="bg-brand-purple-600 text-white rounded-xl shadow-2xl overflow-hidden">
+                   <div class="grid grid-cols-1 md:grid-cols-2">
+                       <div class="p-8 md:p-12"><h2 class="text-3xl font-bold">¿Listo/a para dar el primer paso?</h2><p class="mt-4 text-brand-purple-100 max-w-md">La incertidumbre es el peor enemigo. Agenda una evaluación inicial gratuita de 15 minutos y sin compromiso. Conversemos sobre tu caso y descubre cómo podemos ayudarte a encontrar la solución.</p></div>
+                       <div class="bg-white p-8 md:p-12">
+                           <form action="mailto:moragagenesis@gmail.com" method="POST" enctype="text/plain">
+                               <div class="space-y-4">
+                                   <div>
+                                       <label for="name" class="sr-only">Nombre</label>
+                                       <input type="text" name="Nombre" id="name" class="w-full px-4 py-3 rounded-md border-brand-gray-300 focus:ring-brand-purple-500 focus:border-brand-purple-500 text-brand-gray-800" placeholder="Tu Nombre Completo">
+                                   </div>
+                                   <div>
+                                       <label for="email" class="sr-only">Email</label>
+                                       <input type="email" name="Email" id="email" class="w-full px-4 py-3 rounded-md border-brand-gray-300 focus:ring-brand-purple-500 focus:border-brand-purple-500 text-brand-gray-800" placeholder="Tu Correo Electrónico">
+                                   </div>
+                                   <div>
+                                       <label for="message" class="sr-only">Mensaje</label>
+                                       <textarea name="Mensaje" id="message" rows="4" class="w-full px-4 py-3 rounded-md border-brand-gray-300 focus:ring-brand-purple-500 focus:border-brand-purple-500 text-brand-gray-800" placeholder="Cuéntame brevemente tu situación..."></textarea>
+                                   </div>
+                                   <button type="submit" class="w-full bg-brand-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-brand-gray-900 transition-colors shadow-md">
+                                       Solicitar mi Evaluación Gratuita
+                                   </button>
+                               </div>
+                           </form>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+    </main>
+
+    <!-- === SECTION 8: FOOTER === -->
+    <footer class="bg-brand-gray-800 text-brand-gray-300">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div><h3 class="text-xl font-bold text-white">Prisma<span class="font-light">Legal</span></h3><p class="mt-2 text-brand-gray-400">Soluciones legales claras y eficientes.</p></div>
+                <div>
+                    <h4 class="font-semibold text-white">Contacto</h4>
+                    <ul class="mt-2 space-y-1 text-brand-gray-400">
+                        <li><a href="mailto:moragagenesis@gmail.com" class="hover:text-white">moragagenesis@gmail.com</a></li>
+                        <li><a href="https://wa.me/56998099013" target="_blank" class="hover:text-white">+56 9 9809 9013</a></li>
+                        <li>Atención Remota en todo Chile</li>
+                    </ul>
+                </div>
+                <div><h4 class="font-semibold text-white">Síguenos</h4><div class="mt-2 flex justify-center md:justify-start space-x-4"><a href="https://www.linkedin.com/in/moragagenesis/" target="_blank" rel="noopener noreferrer" class="text-brand-gray-400 hover:text-white"><i data-lucide="linkedin" class="w-6 h-6"></i></a></div></div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-brand-gray-700 text-center text-sm text-brand-gray-500">
+                <p>Este sitio web tiene un carácter meramente informativo y no constituye asesoría legal.</p><p class="mt-2">© 2025 Prisma Legal. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- === WHATSAPP FLOATING BUTTON === -->
+    <a href="https://wa.me/56998099013" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-whatsapp text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-50">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+    
+    <!-- === MODAL (POP-UP) STRUCTURE === -->
+    <div id="service-modal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto p-6 md:p-8 relative">
+            <button id="modal-close-button" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+            <h2 id="modal-title" class="text-2xl md:text-3xl font-bold text-brand-gray-800 mb-4">Título del Servicio</h2>
+            <div id="modal-content" class="prose max-w-none text-brand-gray-600">
+                <p>Aquí va el contenido detallado del servicio.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Mobile Menu Logic ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+
+        // --- MODAL (POP-UP) LOGIC ---
+        const modalContentData = {
+            familia: {
+                title: "Derecho de Familia",
+                content: `<p>Los asuntos de familia son delicados y requieren un trato empático y profesional. En Prisma Legal te acompañamos en procesos como:</p><ul><li><strong>Divorcios:</strong> Ya sea de mutuo acuerdo, unilateral o culposo, te guiamos para disolver el vínculo matrimonial de la forma más ordenada posible.</li><li><strong>Pensión de Alimentos:</strong> Asesoramos tanto al solicitante como al demandado para fijar, aumentar o rebajar montos justos para la mantención de los hijos.</li><li><strong>Cuidado Personal (Tuición):</strong> Buscamos siempre el bienestar superior del niño, niña o adolescente en la definición de su cuidado y residencia principal.</li><li><strong>Régimen de Visitas (Relación Directa y Regular):</strong> Ayudamos a establecer un régimen de visitas que fomente el vínculo afectivo entre padres e hijos.</li></ul>`
+            },
+            laboral: {
+                title: "Derecho Laboral",
+                content: `<p>Protegemos tus derechos como trabajador frente a situaciones de vulnerabilidad en tu entorno laboral. Nuestra asesoría se enfoca en:</p><ul><li><strong>Despidos Injustificados:</strong> Si consideras que tu despido no se ajusta a la ley, analizamos tu caso para demandar las indemnizaciones correspondientes.</li><li><strong>Autodespido o Despido Indirecto:</strong> Te guiamos para que puedas poner término a tu contrato de trabajo cuando es el empleador quien incumple gravemente sus obligaciones.</li><li><strong>Cobro de Prestaciones:</strong> Nos encargamos de gestionar el cobro de sueldos impagos, cotizaciones previsionales y otros beneficios adeudados.</li><li><strong>Tutela Laboral:</strong> Te defendemos frente a vulneraciones de tus derechos fundamentales en el trabajo, como acoso laboral o discriminación.</li></ul>`
+            },
+            arriendo: {
+                title: "Conflictos de Arriendo",
+                content: `<p>Tanto si eres arrendador como arrendatario, los contratos de arriendo pueden generar conflictos. Te ayudamos a resolverlos:</p><ul><li><strong>No pago de rentas:</strong> Iniciamos las acciones legales para obtener el pago de lo adeudado y, de ser necesario, la restitución del inmueble.</li><li><strong>Terminación de Contrato:</strong> Te asesoramos para poner fin al contrato de arriendo de acuerdo a las causales y plazos que establece la ley.</li><li><strong>Restitución de Propiedad:</strong> Llevamos a cabo el juicio para que recuperes tu propiedad cuando el arrendatario no la desocupa voluntariamente.</li></ul>`
+            },
+            deudas: {
+                title: "Cobranza de Deudas",
+                content: "<p>Recuperar el dinero que te deben puede ser un proceso desgastante. Nos encargamos de la cobranza judicial de instrumentos como pagarés, cheques, facturas y letras de cambio para que puedas recuperar tu patrimonio de forma eficiente.</p>"
+            },
+            contratos: {
+                title: "Revisión y Redacción de Contratos",
+                content: "<p>Un contrato bien redactado es la mejor prevención contra futuros problemas. Revisamos y redactamos contratos de todo tipo (compraventa, promesa, prestación de servicios, etc.) para asegurar que tus intereses estén protegidos y que los términos sean claros y justos para todas las partes.</p>"
+            },
+            herencias: {
+                title: "Herencias y Testamentos",
+                content: "<p>La planificación sucesoria y la gestión de una herencia son procesos complejos. Te guiamos en la redacción de testamentos y en la tramitación de la posesión efectiva (testada o intestada), buscando siempre acuerdos entre los herederos para una partición justa y ordenada de los bienes.</p>"
+            },
+            indemnizacion: {
+                title: "Juicios por Indemnización de Perjuicios",
+                content: "<p>Si has sufrido un daño material o moral por la acción negligente de un tercero (por ejemplo, en un accidente de tránsito o por una negligencia médica), iniciamos las acciones legales correspondientes para que obtengas la compensación económica que te corresponde por los perjuicios sufridos.</p>"
+            },
+            consumidor: {
+                title: "Defensa del Consumidor",
+                content: "<p>Como consumidor, tienes derechos que las empresas deben respetar. Te defendemos ante incumplimientos de garantía, publicidad engañosa, cláusulas abusivas en contratos o productos defectuosos, presentando las denuncias correspondientes ante el SERNAC o los tribunales.</p>"
+            }
+        };
+
+        const serviceCards = document.querySelectorAll('.service-card');
+        const modal = document.getElementById('service-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContentEl = document.getElementById('modal-content');
+        const closeModalButton = document.getElementById('modal-close-button');
+
+        const openModal = (serviceKey) => {
+            const data = modalContentData[serviceKey];
+            if (!data) return;
+
+            modalTitle.textContent = data.title;
+            modalContentEl.innerHTML = data.content;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; 
+        };
+
+        const closeModal = () => {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; 
+        };
+
+        serviceCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const serviceKey = card.getAttribute('data-service');
+                openModal(serviceKey);
+            });
+        });
+
+        closeModalButton.addEventListener('click', closeModal);
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        // --- Initialize Lucide Icons AT THE END ---
+        lucide.createIcons();
+        
+    </script>
+</body>
+</html>
